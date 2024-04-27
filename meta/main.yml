@@ -1,13 +1,14 @@
 ---
 galaxy_info:
-  author: Aleksander Bang-Larsen
+  role_name: sonos_stream
+  author: aleksanderbl29
   description: Ansible role to deploy a local radio for sonos streaming of vinyl records on debian based systems.
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
   # issue_tracker_url: http://example.com/issue/tracker
 
-  license: GPL-3.0
+  license: "license (BSD, MIT)"
 
   min_ansible_version: '2.11'
 
