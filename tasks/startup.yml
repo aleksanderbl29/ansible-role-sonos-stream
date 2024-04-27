@@ -1,0 +1,8 @@
+---
+- name: Launch icecast2
+  ansible.builtin.cmd:
+    cmd: icecast2 -c /etc/icecast2/icecast.xml
+
+- name: Launch darkice
+  ansible.builtin.cmd:
+    cmd: darkice -c /etc/darkice/darkice.cfg
