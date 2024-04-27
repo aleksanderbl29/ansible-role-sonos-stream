@@ -1,0 +1,15 @@
+---
+- name: Get device ID for soundcard
+  ansible.builtin.shell:
+    cmd: $(arecord -l | awk '/^card/ {gsub(/:/,"",$2); print $2}')
+  register: soundcard_id
+
+- name: Write soundcard id to darkice configuration file
+  ansible.builtin.lineinfile:
+    path: /etc/darkice/darkice.cfg
+    line: "device          = plughw:{{ soundcard_id.stdout }},0 # Soundcard device for the audio input"
+    regexp: "^device"
+    state: present
+    create: false
+    owner: "{{ ansible_user }}"
+    mode: 0644
