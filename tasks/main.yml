@@ -1,0 +1,17 @@
+---
+# tasks file for sonos-streamer
+- name: Ensure apt cache is up to date
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 10800
+    upgrade: "yes"
+  when:
+    - ansible_facts.os_family == "Debian"
+
+- name: Include role tasks
+  include_tasks: "{{ item }}"
+  loop:
+    - install_icecast.yml
+    - install_darkice.yml
+    - configure.yml
+    - startup.yml
