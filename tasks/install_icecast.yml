@@ -1,0 +1,13 @@
+---
+- name: Install icecast2
+  apt:
+    name: icecast2
+    state: present
+    update_cache: true
+
+- name: Copy icecast2 configuration file
+  copy:
+    src: ../files/icecast.xml
+    dest: /etc/icecast2/icecast.xml
+    owner: "{{ ansible_user }}"
+    mode: 0644
