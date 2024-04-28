@@ -15,4 +15,9 @@
     src: ../files/darkice.cfg
     dest: /etc/darkice/darkice.cfg
     owner: "{{ ansible_user }}"
-    mode: 0644
+
+- name: Copy darkice daemon file
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/x20mar/darkice-with-mp3-for-raspberry-pi/master/init.d-darkice
+    dest: /etc/init.d/darkice
+    mode: a+x
