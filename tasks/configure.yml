@@ -16,6 +16,17 @@
     # mode: "0644"
     mode: "777"
 
+- name: Write soundcard id to darkice configuration file in etc
+  ansible.builtin.lineinfile:
+    path: /etc/darkice.cfg
+    line: "device          = plughw:{{ soundcard_id.stdout }},0 # Soundcard device for the audio input"
+    regexp: "^device"
+    state: present
+    create: false
+    owner: "{{ ansible_user }}"
+    # mode: "0644"
+    mode: "777"
+
 - name: Write username to icecast configuration file
   ansible.builtin.lineinfile:
     path: /home/{{ ansible_user }}/icecast2/icecast.xml
