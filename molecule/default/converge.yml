@@ -20,5 +20,9 @@
       changed_when: false
       failed_when: systemctl_status.rc > 1
 
+    - name: Include molecule vars
+      include_vars:
+        file: vars/molecule.yml
+
   roles:
     - role: aleksanderbl29.sonos-stream
