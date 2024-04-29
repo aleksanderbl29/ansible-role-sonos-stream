@@ -22,7 +22,7 @@
 
     - name: Include molecule vars
       include_vars:
-        file: vars/molecule.yml
+        file: ../../vars/molecule.yml
 
   roles:
     - role: aleksanderbl29.sonos-stream
