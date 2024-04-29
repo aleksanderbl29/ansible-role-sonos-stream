@@ -1,4 +1,4 @@
-# sonos-stream-ansible-role
+# ansible-role-sonos-stream
 
 [![CI](https://github.com/aleksanderbl29/ansible-role-sonos-stream/actions/workflows/ci.yml/badge.svg)](https://github.com/aleksanderbl29/ansible-role-sonos-stream/actions/workflows/ci.yml)
 
