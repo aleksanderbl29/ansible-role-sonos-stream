@@ -1,7 +1,7 @@
 ---
 - name: Check if URL is reachable
   ansible.builtin.uri:
-    url: "localhost:8000/rapi.mp3"
+    url: "http://172.0.0.1:8000/rapi.mp3"
     method: GET
     return_content: false
   register: url_check
