@@ -12,7 +12,7 @@
 
 - name: Create darkice configuration directory
   ansible.builtin.file:
-    path: ~/darkice
+    path: /home/{{ ansible_user }}/darkice
     state: directory
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
@@ -31,7 +31,7 @@
 - name: Copy darkice configuration file
   ansible.builtin.copy:
     src: ../files/darkice.cfg
-    dest: ~/darkice/darkice.cfg
+    dest: /home/{{ ansible_user }}/darkice/darkice.cfg
     owner: "{{ ansible_user }}"
     # mode: "0644"
     mode: "777"

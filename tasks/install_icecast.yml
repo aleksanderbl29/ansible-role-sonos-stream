@@ -7,7 +7,7 @@
 
 - name: Create icecast2 configuration directory
   ansible.builtin.file:
-    path: ~/icecast2
+    path: /home/{{ ansible_user }}/icecast2
     state: directory
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
@@ -17,7 +17,7 @@
 - name: Copy icecast2 configuration file
   ansible.builtin.copy:
     src: ../files/icecast.xml
-    dest: ~/icecast2/icecast.xml
+    dest: /home/{{ ansible_user }}/icecast2/icecast.xml
     owner: "{{ ansible_user }}"
     # mode: "0644"
     mode: "777"

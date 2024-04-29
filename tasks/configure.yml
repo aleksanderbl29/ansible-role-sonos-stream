@@ -7,7 +7,7 @@
 
 - name: Write soundcard id to darkice configuration file
   ansible.builtin.lineinfile:
-    path: ~/darkice/darkice.cfg
+    path: /home/{{ ansible_user }}/darkice/darkice.cfg
     line: "device          = plughw:{{ soundcard_id.stdout }},0 # Soundcard device for the audio input"
     regexp: "^device"
     state: present
@@ -29,7 +29,7 @@
 
 - name: Write username to icecast configuration file
   ansible.builtin.lineinfile:
-    path: ~/icecast2/icecast.xml
+    path: /home/{{ ansible_user }}/icecast2/icecast.xml
     line: "<user>{{ ansible_user }}</user>"
     regexp: "<user>"
     state: present
@@ -40,7 +40,7 @@
 
 - name: Write group to icecast configuration file
   ansible.builtin.lineinfile:
-    path: ~/icecast2/icecast.xml
+    path: /home/{{ ansible_user }}/icecast2/icecast.xml
     line: "<group>{{ ansible_user }}</group>"
     regexp: "<group>"
     state: present
