@@ -4,6 +4,8 @@
 
 Ansible Role to deploy local Sonos radio for vinyl streaming on Debian/Ubuntu/Raspbian
 
+CURRENTLY A WORK IN PROGRESS - DO NOT DEPLOY
+
 Requirements
 ------------
 
