@@ -11,4 +11,4 @@
 - name: Launch darkice daemon
   ansible.builtin.command:
     cmd: /etc/init.d/darkice start
-    # become: true
+  become: true
