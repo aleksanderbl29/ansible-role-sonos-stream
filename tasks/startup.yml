@@ -1,11 +1,11 @@
 ---
 - name: Launch icecast2
   ansible.builtin.command:
-    cmd: icecast2 -c /home/{{ ansible_user }}/icecast2/icecast.xml -b
+    cmd: icecast2 -c ~/icecast2/icecast.xml -b
 
 # - name: Launch darkice
 #   ansible.builtin.command:
-#     # cmd: darkice -c /home/{{ ansible_user }}/darkice/darkice.cfg
+#     # cmd: darkice -c ~/darkice/darkice.cfg
 #     cmd: sudo darkice -v 10
 
 - name: Launch darkice daemon
