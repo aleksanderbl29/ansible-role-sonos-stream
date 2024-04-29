@@ -1,0 +1,11 @@
+---
+- name: Check if URL is reachable
+  ansible.builtin.uri:
+    url: "localhost:8000/rapi.mp3"
+    method: GET
+    return_content: false
+  register: url_check
+
+- name: Print URL status
+  ansible.builtin.debug:
+    msg: "Streaming service is {{ 'reachable' if url_check.status == 200 else 'unreachable' }}"

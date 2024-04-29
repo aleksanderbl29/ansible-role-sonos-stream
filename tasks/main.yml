@@ -8,3 +8,4 @@
     - install_darkice.yml
     - configure.yml
     - startup.yml
+    - verify.yml
