@@ -8,7 +8,6 @@
     - install_darkice.yml
     - configure.yml
     - startup.yml
-    - verify.yml
 
 - name: Include verify tasks
   ansible.builtin.include_tasks: verify.yml
