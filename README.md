@@ -14,21 +14,29 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Disable service verification with the following variables.
+Set `disable_verification` to disable all verification after installation and launch.
+Set `disable_conn_validation` to not check if the service is reachable
+Set `disable_stream_endpoint_check` to not check if the configured stream endpoint is reachable
+
+The defaults (verification turned on) is false for all three
+
+    - disable_verification: false
+    - disable_conn_validation: false
+    - disable_stream_endpoint_check: false
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+        - role: aleksanderbl29.sonos_stream
+          disable_verification: false
 
 License
 -------
