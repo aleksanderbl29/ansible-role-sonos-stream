@@ -12,4 +12,4 @@
 
 - name: Include verify tasks
   ansible.builtin.include_tasks: verify.yml
-  when: disable_all_verification is false
+  when: disable_verification is false
