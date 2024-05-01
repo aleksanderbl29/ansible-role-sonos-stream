@@ -5,6 +5,7 @@
     port: 8000
     timeout: 30
     active_connection_states: ESTABLISHED
+  when: disable_conn_validation is false
 
 - name: Check if stream is reachable
   ansible.builtin.uri:
@@ -12,7 +13,9 @@
     method: GET
     return_content: false
   register: url_check
+  when: disable_stream_endpoint_check is false
 
 - name: Print URL status
   ansible.builtin.debug:
     msg: "Streaming service is {{ 'reachable' if url_check.status == 200 else 'unreachable' }}"
+  when: disable_stream_endpoint_check is false
