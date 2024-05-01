@@ -26,3 +26,4 @@
 
   roles:
     - role: aleksanderbl29.sonos-stream
+      disable_verification: true
