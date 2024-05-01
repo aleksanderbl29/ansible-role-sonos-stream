@@ -19,7 +19,7 @@ Set `disable_verification` to disable all verification after installation and la
 Set `disable_conn_validation` to not check if the service is reachable
 Set `disable_stream_endpoint_check` to not check if the configured stream endpoint is reachable
 
-The defaults (verification turned on) is false for all three
+The defaults (verification turned on) is false for all three. None of the variables are required for deployment.
 
     - disable_verification: false
     - disable_conn_validation: false
