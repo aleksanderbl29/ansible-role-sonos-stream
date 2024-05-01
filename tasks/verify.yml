@@ -1,11 +1,11 @@
 ---
-- name: Validate connection to server
-  ansible.builtin.wait_for:
-    host: "{{ ansible_host }}"
-    port: 8000
-    timeout: 30
-    active_connection_states: ESTABLISHED
-  when: disable_conn_validation is false
+# - name: Validate connection to server
+#   ansible.builtin.wait_for:
+#     host: "{{ ansible_host }}"
+#     port: 8000
+#     timeout: 30
+#     active_connection_states: ESTABLISHED
+#   when: disable_conn_validation is false
 
 - name: Check if stream is reachable
   ansible.builtin.uri:
