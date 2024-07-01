@@ -21,6 +21,7 @@
     owner: "{{ ansible_user }}"
     # mode: "0644"
     mode: "777"
+    checksum: true
 
 - name: Create icecast2 log directory
   ansible.builtin.file:

@@ -34,8 +34,8 @@
     dest: /home/{{ ansible_user }}/darkice/darkice.cfg
     owner: "{{ ansible_user }}"
     # mode: "0644"
-    # mode: "777"
-    mode: "664"
+    mode: "777"
+    checksum: true
 
 - name: Copy darkice configuration file to another place
   ansible.builtin.copy:
@@ -43,8 +43,8 @@
     dest: /etc/darkice.cfg
     owner: "{{ ansible_user }}"
     # mode: "0644"
-    # mode: "777"
-    mode: "664"
+    mode: "777"
+    checksum: true
 
 - name: Copy darkice daemon file
   ansible.builtin.get_url:
