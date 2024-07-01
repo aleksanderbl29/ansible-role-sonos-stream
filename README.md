@@ -1,6 +1,7 @@
 # ansible-role-sonos-stream
 
-[![CI](https://github.com/aleksanderbl29/ansible-role-sonos-stream/actions/workflows/ci.yml/badge.svg)](https://github.com/aleksanderbl29/ansible-role-sonos-stream/actions/workflows/ci.yml)
+[![CI](https://github.com/aleksanderbl29/ansible-role-sonos-stream/actions/workflows/ci.yml/badge.svg)](https://github.com/aleksanderbl29/ansible-role-sonos-stream/actions/workflows/ci.yml) ![Ansible Role](https://img.shields.io/ansible/role/d/aleksanderbl29/hyperhdr)
+
 
 Ansible Role to deploy local Sonos radio for vinyl streaming on Debian/Ubuntu/Raspbian
 
