@@ -4,6 +4,7 @@
     # cmd: $(arecord -l | awk '/^card/ {gsub(/:/,"",$2); print $2}')
     cmd: arecord -l | grep CODEC | awk '/^card/ {gsub(/:/,"",$2); print $2}'
   register: soundcard_id
+  changed_when: false
 
 - name: Write soundcard id to darkice configuration file
   ansible.builtin.lineinfile:
